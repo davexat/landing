@@ -15,7 +15,7 @@ let sendData = () => {
     })
         .then(response => {
             if (!response.ok) {
-                throw new Error('Error en la solicitud: ${response.statusText}');
+                throw new Error(`Error en la solicitud: ${response.statusText}`);
             }
             return response.json();
         })
