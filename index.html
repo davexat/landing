@@ -1408,7 +1408,7 @@
     </section> -->
 
     <!-- Contact section (deprecated) -->
-    <section id="contact" class="section-area">
+    <!-- <section id="contact" class="section-area">
       <div class="container">
         <div class="row">
           <div class="col-12 xl:col-4">
@@ -1520,13 +1520,167 @@
           </div>
         </div>
       </div>
+    </section> -->
+
+    <!-- Sección de contacto mejorada -->
+    <section id="contacto" class="section-area relative overflow-hidden">
+      <!-- Elemento decorativo de fondo -->
+      <div class="absolute -right-24 -top-24 w-64 h-64 rounded-full bg-primary/10 blur-3xl"></div>
+      <div class="absolute -left-32 bottom-24 w-72 h-72 rounded-full bg-primary/5 blur-3xl"></div>
+
+      <div class="container max-w-5xl mx-auto relative z-10">
+        <!-- Encabezado de sección -->
+        <div class="scroll-revealed text-center mb-12">
+          <span class="inline-block text-primary font-bold py-2 px-4 rounded-full bg-primary/10 mb-3">
+            <i class="lni lni-envelope-open mr-2"></i>Ponte en contacto
+          </span>
+          <h2 class="mb-4 text-4xl font-bold text-body-light-12 dark:text-body-dark-12">Contáctanos</h2>
+          <p class="mb-6 text-lg max-w-2xl mx-auto text-body-light-11 dark:text-body-dark-11">
+            Estamos aquí para ayudarte. Si quieres unirte, colaborar o simplemente saber más sobre IEEE CIS ESPOL,
+            escríbenos.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Columna de información de contacto -->
+          <div class="md:col-span-1">
+            <div class="bg-body-light-1 dark:bg-primary-dark-2 rounded-2xl p-6 shadow-card-1 h-full">
+              <h3 class="font-semibold text-xl mb-6 text-primary">Información de contacto</h3>
+
+              <div class="space-y-6">
+                <!-- Email -->
+                <div class="flex items-start gap-4">
+                  <div class="bg-primary/10 rounded-lg p-3 text-primary">
+                    <i class="lni lni-envelope text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-medium text-body-light-10 dark:text-body-dark-10 mb-1">Email</h4>
+                    <a href="mailto:cis.ieee@espol.edu.ec"
+                      class="text-body-light-12 dark:text-body-dark-12 hover:text-primary">
+                      cis.ieee@espol.edu.ec
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Ubicación -->
+                <div class="flex items-start gap-4">
+                  <div class="bg-primary/10 rounded-lg p-3 text-primary">
+                    <i class="lni lni-map-marker text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-medium text-body-light-10 dark:text-body-dark-10 mb-1">Ubicación</h4>
+                    <p class="text-body-light-12 dark:text-body-dark-12">
+                      Campus Gustavo Galindo – ESPOL<br>
+                      Guayaquil, Ecuador
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Redes sociales -->
+                <div>
+                  <h4 class="text-sm font-medium text-body-light-10 dark:text-body-dark-10 mb-3">Síguenos</h4>
+                  <div class="flex gap-4">
+                    <a href="https://www.linkedin.com/company/ieee-computational-intelligence-society/" target="_blank"
+                      class="bg-primary/10 hover:bg-primary text-primary hover:text-primary-color w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                      <i class="lni lni-linkedin-original"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ieeecis/" target="_blank"
+                      class="bg-primary/10 hover:bg-primary text-primary hover:text-primary-color w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                      <i class="lni lni-instagram-original"></i>
+                    </a>
+                    <a href="#" target="_blank"
+                      class="bg-primary/10 hover:bg-primary text-primary hover:text-primary-color w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                      <i class="lni lni-twitter-original"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna del formulario de contacto -->
+          <div class="md:col-span-2">
+            <form action="mailto:cis.ieee@espol.edu.ec" method="POST"
+              class="bg-body-light-1 dark:bg-primary-dark-2 rounded-2xl p-8 shadow-card-1 hover:shadow-lg transition-all">
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="nombre"
+                    class="block mb-2 text-sm font-medium text-body-light-11 dark:text-body-dark-11">Nombre
+                    completo</label>
+                  <div class="relative">
+                    <span class="absolute left-4 top-1/2 -translate-y-1/2 text-primary">
+                      <i class="lni lni-user"></i>
+                    </span>
+                    <input type="text" id="nombre" name="nombre" required
+                      class="block w-full pl-10 pr-4 py-3 rounded-lg border border-solid border-alpha-light dark:border-alpha-dark text-body-light-12 dark:text-body-dark-12 focus:border-primary focus:ring-2 focus:ring-primary/30 bg-transparent"
+                      placeholder="Tu nombre" />
+                  </div>
+                </div>
+                <div>
+                  <label for="email"
+                    class="block mb-2 text-sm font-medium text-body-light-11 dark:text-body-dark-11">Correo
+                    electrónico</label>
+                  <div class="relative">
+                    <span class="absolute left-4 top-1/2 -translate-y-1/2 text-primary">
+                      <i class="lni lni-envelope"></i>
+                    </span>
+                    <input type="email" id="email" name="email" required
+                      class="block w-full pl-10 pr-4 py-3 rounded-lg border border-solid border-alpha-light dark:border-alpha-dark text-body-light-12 dark:text-body-dark-12 focus:border-primary focus:ring-2 focus:ring-primary/30 bg-transparent"
+                      placeholder="tucorreo@ejemplo.com" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-6">
+                <label for="telefono"
+                  class="block mb-2 text-sm font-medium text-body-light-11 dark:text-body-dark-11">Teléfono <span
+                    class="text-body-light-10">(opcional)</span></label>
+                <div class="relative">
+                  <span class="absolute left-4 top-1/2 -translate-y-1/2 text-primary">
+                    <i class="lni lni-phone"></i>
+                  </span>
+                  <input type="tel" id="telefono" name="telefono"
+                    class="block w-full pl-10 pr-4 py-3 rounded-lg border border-solid border-alpha-light dark:border-alpha-dark text-body-light-12 dark:text-body-dark-12 focus:border-primary focus:ring-2 focus:ring-primary/30 bg-transparent"
+                    placeholder="Tu número de contacto" />
+                </div>
+              </div>
+
+              <div class="mb-8">
+                <label for="mensaje"
+                  class="block mb-2 text-sm font-medium text-body-light-11 dark:text-body-dark-11">Mensaje</label>
+                <div class="relative">
+                  <span class="absolute left-4 top-4 text-primary">
+                    <i class="lni lni-comments-alt"></i>
+                  </span>
+                  <textarea id="mensaje" name="mensaje" rows="5" required
+                    class="block w-full pl-10 pr-4 py-3 rounded-lg border border-solid border-alpha-light dark:border-alpha-dark text-body-light-12 dark:text-body-dark-12 focus:border-primary focus:ring-2 focus:ring-primary/30 bg-transparent resize-none"
+                    placeholder="¿En qué podemos ayudarte?"></textarea>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <p class="text-xs text-body-light-10 dark:text-body-dark-10">
+                  Tus datos solo serán utilizados para responderte.
+                </p>
+                <button type="submit"
+                  class="inline-flex items-center px-6 py-3 rounded-lg bg-primary text-primary-color font-semibold shadow-md hover:translate-y-[-2px] focus:bg-primary-light-5 transition-all">
+                  <i class="lni lni-telegram-original mr-2"></i>
+                  Enviar mensaje
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Map section -->
+    <!-- Mapa - Actualizado para usar ubicación real de ESPOL -->
     <section id="map" class="w-full h-[500px] overflow-hidden -mt-[12rem]">
-      <object
-        data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1991.0094028113572!2d98.67188956289421!3d3.583155328672593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131cc1c3eb2fd%3A0x23d431c8a6908262!2sMedan%2C%20Kota%20Medan%2C%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1723787393945!5m2!1sid!2sid"
-        class="border-0 w-full h-full"></object>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0162001338925!2d-79.96698039999999!3d-2.1478962999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d72f925e5bfdb%3A0x327f1652092bb86d!2sEscuela%20Superior%20Polit%C3%A9cnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses-419!2sec!4v1717894793962!5m2!1ses-419!2sec"
+        class="border-0 w-full h-full" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   </main>
 
