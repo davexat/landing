@@ -23,5 +23,8 @@
   "devDependencies": {
     "tailwindcss": "^3.4.10",
     "vite": "^6.3.4"
+  },
+  "dependencies": {
+    "firebase": "^11.9.1"
   }
 }
