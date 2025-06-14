@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html"],
-  darkMode: ["selector", "[data-web-theme=dark]"],
+  content: ["./index.html", "./index2.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     container: {
       center: true,
@@ -14,35 +14,8 @@ module.exports = {
       colors: {
         primary: {
           DEFAULT: "#21b2e3",
-          color: "#fff",
-          light: {
-            1: "#f0fbfe",
-            2: "#d6f4fc",
-            3: "#b3e9f8",
-            4: "#8edcf3",
-            5: "#6ad0ee",
-            6: "#47c3ea",
-            7: "#21b2e3",
-            8: "#1a9fc9",
-            9: "#178db0",
-            10: "#147b97",
-            11: "#11697e",
-            12: "#0e5765",
-          },
-          dark: {
-            1: "#1a2a33",
-            2: "#1d3a47",
-            3: "#205a6b",
-            4: "#237a8f",
-            5: "#269ab3",
-            6: "#21b2e3",
-            7: "#47c3ea",
-            8: "#6ad0ee",
-            9: "#8edcf3",
-            10: "#b3e9f8",
-            11: "#d6f4fc",
-            12: "#f0fbfe",
-          },
+          light: "#6ad0ee", // Clase bg-primary-light
+          dark: "#147b97",
         },
         body: {
           light: {

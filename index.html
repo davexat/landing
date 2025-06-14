@@ -5,157 +5,99 @@
   <!-- Meta Tags -->
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta http-equiv="Copyright" content="Inazuma" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Ranyeh (template author), adaptado por usuario/modificador" />
-  <meta name="rating" content="general" />
-  <meta name="language" content="English" />
-  <meta name="application-name" content="Inazuma" />
   <meta name="description"
     content="Página de aterrizaje para IEEE CIS ESPOL, adaptada de una plantilla Tailwind CSS." />
-  <meta name="keywords" content="company" />
-  <meta name="twitter:title" content="Inazuma | Tailwind CSS Company Landing Page" />
-  <meta name="twitter:description"
-    content="Página de aterrizaje para IEEE CIS ESPOL, adaptada de una plantilla Tailwind CSS." />
-  <meta name="twitter:image" content="./assets/img/logo.png" />
-  <meta content="IEEE CIS ESPOL" property="og:title" />
-  <meta content="IEEE CIS ESPOL" property="og:site_name" />
-  <meta content="Página de aterrizaje para IEEE CIS ESPOL, adaptada de una plantilla Tailwind CSS."
-    property="og:description" />
-  <meta content="./assets/img/logo.png" property="og:image" />
-  <meta content="https://cis.ieee.espol.edu.ec" property="og:url" />
-  <meta content="website" property="og:type" />
-
-  <meta name="msapplication-TileColor" content="#3d63dd" />
-  <meta name="msapplication-TileImage" content="./assets/favicon/mstile-144x144.png" />
-  <meta name="theme-color" content="#3d63dd" />
 
   <!-- Page title -->
   <title>IEEE CIS ESPOL</title>
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://ranyeh24.github.io/inazuma-tailwind" />
+  <!-- TailwindCSS v4 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="194x194" href="./assets/favicon/favicon-194x194.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-chrome-192x192.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
-  <link rel="manifest" href="./assets/favicon/site.webmanifest.json" />
-  <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#3d63dd" />
-
-  <!-- CSS Plugins -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-  <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
-
-  <link rel="stylesheet" href="./assets/css/main.css" />
+  <!-- Line icons -->
+  <link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css">
 </head>
 
-<body>
-  <!-- Page loading
-  <div
-    class="page-loading fixed top-0 bottom-0 left-0 right-0 z-[99999] flex items-center justify-center bg-primary-light-1 dark:bg-primary-dark-1 opacity-100 visible pointer-events-auto"
-    role="status" aria-live="polite" aria-atomic="true" aria-label="Loading...">
-    <div class="grid-loader">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div> -->
-
+<body class="bg-gray-50 text-gray-900">
   <!-- Navbar -->
-  <header class="ic-navbar absolute left-0 top-0 z-40 flex w-full items-center bg-transparent" role="banner"
+  <header class="absolute left-0 top-0 z-40 flex w-full items-center bg-transparent" role="banner"
     aria-label="Navigation bar">
-    <div class="container">
-      <div class="ic-navbar-container relative -mx-5 flex items-center justify-between">
-        <div class="w-60 lg:w-56 max-w-full px-5">
-          <a href="." class="ic-navbar-logo block w-full">
-            <img src="./assets/img/logo.png" alt="Computacional Intelligence Society logo"
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between">
+        <div class="w-60 lg:w-56">
+          <a href="." class="block w-full">
+            <img src="./img/logo/logo.png" alt="Computacional Intelligence Society logo"
               class="h-10 w-auto object-contain" />
           </a>
         </div>
-        <div class="flex w-full items-center justify-between px-5">
-          <div>
-            <button type="button"
-              class="ic-navbar-toggler absolute right-4 top-1/2 block -translate-y-1/2 rounded-md px-3 py-[6px] text-[22px]/none text-primary-color ring-primary focus:ring-2 lg:hidden"
-              data-web-toggle="navbar-collapse" data-web-target="navbarMenu" aria-expanded="false"
-              aria-label="Toggle navigation menu">
-              <i class="lni lni-menu"></i>
-            </button>
+        <div class="flex items-center space-x-4">
+          <button type="button"
+            class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-md px-3 py-[6px] text-[22px]/none text-gray-900 ring-gray-500 focus:ring-2 lg:hidden"
+            data-web-toggle="navbar-collapse" data-web-target="navbarMenu" aria-expanded="false"
+            aria-label="Toggle navigation menu">
+            <i class="lni lni-menu"></i>
+          </button>
 
-            <nav id="navbarMenu"
-              class="ic-navbar-collapse absolute right-4 top-[80px] w-full max-w-[250px] rounded-lg hidden bg-primary-light-1 py-5 shadow-lg dark:bg-primary-dark-1 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
-              <ul class="block lg:flex" role="menu" aria-label="Navigation menu">
+          <nav id="navbarMenu"
+            class="absolute right-4 top-[80px] w-full max-w-[250px] rounded-lg hidden bg-gray-100 py-5 shadow-lg dark:bg-gray-800 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
+            <ul class="block lg:flex" role="menu" aria-label="Navigation menu">
                 <li class="group relative">
-                  <a href="#home"
-                    class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 active"
-                    role="menuitem">Inicio</a>
+                <a href="#home"
+                  class="flex py-2 px-6 text-base font-medium text-white hover:text-sky-100 lg:inline-flex lg:px-6 lg:py-6"
+                  role="menuitem">Inicio</a>
                 </li>
-
                 <li class="group relative">
-                  <a href="#about"
-                    class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
-                    role="menuitem">Sobre nosotros</a>
+                <a href="#about"
+                  class="flex py-2 px-6 text-base font-medium text-white hover:text-sky-100 lg:inline-flex lg:px-6 lg:py-6"
+                  role="menuitem">Sobre nosotros</a>
                 </li>
-
                 <li class="group relative">
-                  <a href="#activities"
-                    class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
-                    role="menuitem">Actividades</a>
+                <a href="#activities"
+                  class="flex py-2 px-6 text-base font-medium text-white hover:text-sky-100 lg:inline-flex lg:px-6 lg:py-6"
+                  role="menuitem">Actividades</a>
                 </li>
-
                 <li class="group relative">
-                  <a href="#benefits"
-                    class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
-                    role="menuitem">Beneficios</a>
+                <a href="#benefits"
+                  class="flex py-2 px-6 text-base font-medium text-white hover:text-sky-100 lg:inline-flex lg:px-6 lg:py-6"
+                  role="menuitem">Beneficios</a>
                 </li>
-
                 <li class="group relative">
-                  <a href="#contact"
-                    class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
-                    role="menuitem">Contacto</a>
+                <a href="#contact"
+                  class="flex py-2 px-6 text-base font-medium text-white hover:text-sky-100 lg:inline-flex lg:px-6 lg:py-6"
+                  role="menuitem">Contacto</a>
                 </li>
-              </ul>
-            </nav>
-          </div>
+            </ul>
+          </nav>
+        </div>
 
-          <div class="flex items-center justify-end pr-[52px] lg:pr-0">
-            <button type="button" class="inline-flex items-center text-primary-color text-[24px]/none"
-              aria-label="Switch theme" data-web-trigger="web-theme"></button>
-            <div class="hidden sm:flex">
-              <a href="https://www.ieee.org/membership-catalog/productdetail/showProductDetailPage.html?product=MEMCIS011"
-                class="btn-navbar ml-5 px-6 py-3 rounded-md bg-primary-color bg-opacity-20 text-base font-medium text-primary-color hover:bg-opacity-100 hover:text-primary"
-                role="button">Únete</a>
-            </div>
+        <div class="flex items-center justify-end pr-[52px] lg:pr-0">
+          <button type="button" class="inline-flex items-center text-gray-900 text-[24px]/none"
+            aria-label="Switch theme" data-web-trigger="web-theme"></button>
+          <div class="hidden sm:flex">
+            <a href="https://www.ieee.org/membership-catalog/productdetail/showProductDetailPage.html?product=MEMCIS011"
+                class="ml-5 px-6 py-3 rounded-md bg-sky-500 bg-opacity-20 text-white text-base font-medium hover:bg-white hover:text-sky-500 transition-colors duration-300 shadow-lg"
+              role="button">Únete</a>
           </div>
         </div>
       </div>
+    </div>
   </header>
 
-  <main class="main relative">
+  <main class="relative">
     <!-- Hero section -->
-    <section id="home"
-      class="relative overflow-hidden bg-primary text-primary-color pt-[120px] md:pt-[130px] lg:pt-[160px]">
-      <div class="container">
+    <section id="home" class="relative overflow-hidden bg-sky-400 text-white pt-[120px] md:pt-[130px] lg:pt-[160px]">
+      <div class="container max-w-[1200px] mx-auto px-4">
         <div class="-mx-5 flex flex-wrap items-center">
           <div class="w-full px-5">
-            <div class="scroll-revealed mx-auto max-w-[780px] text-center">
+            <div class="mx-auto max-w-[780px] text-center">
               <h1
-                class="mb-6 text-3xl font-bold leading-snug text-primary-color sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight">
+                class="mb-6 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight">
                 IEEE Computacional Intelligence Society ESPOL
               </h1>
 
-              <p class="mx-auto mb-9 max-w-[600px] text-base text-primary-color sm:text-lg sm:leading-normal">
+              <p class="mx-auto mb-9 max-w-[600px] text-base text-white sm:text-lg sm:leading-normal">
                 Somos una comunidad de estudiantes de ESPOL dedicados a la Inteligencia Computacional.
                 Fomentamos el aprendizaje, la investigación y la innovación a través de talleres, eventos y proyectos.
                 ¡Únete y sé parte del futuro de la IA!
@@ -164,14 +106,8 @@
               <ul class="mb-10 flex flex-wrap items-center justify-center gap-4 md:gap-5">
                 <li>
                   <a href="#contact"
-                    class="inline-flex items-center justify-center rounded-md bg-primary-color text-primary px-5 py-3 text-center text-base font-medium shadow-md hover:bg-primary-light-5 md:px-7 md:py-[14px]"
+                    class="inline-flex items-center justify-center rounded-md bg-white text-sky-400 px-5 py-3 text-center text-base font-medium shadow-md hover:bg-gray-100 md:px-7 md:py-[14px]"
                     role="button">Contáctanos</a>
-                </li>
-
-                <li>
-                  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                    class="video-popup flex items-center gap-4 rounded-md bg-primary-color/[0.15] px-5 py-3 text-base font-medium text-primary-color hover:bg-primary-color hover:text-primary md:px-7 md:py-[14px]"
-                    role="button"><i class="lni lni-play text-lg/none"></i>Video Promocional</a>
                 </li>
               </ul>
             </div>
@@ -181,50 +117,50 @@
     </section>
 
     <!-- About section -->
-    <section id="about" class="section-area">
-      <div class="container">
+    <section id="about" class="py-20">
+      <div class="container max-w-[1200px] mx-auto px-4">
         <div class="grid grid-cols-1 gap-14 lg:grid-cols-2">
           <div class="w-full">
-            <figure class="scroll-revealed max-w-[480px] mx-auto">
-              <img src="./assets/img/about-img.jpg" alt="About image" class="rounded-xl" />
+            <figure class="mx-auto max-w-[480px]">
+              <img src="./img/section/about-img.jpg" alt="About image" class="rounded-xl" />
             </figure>
           </div>
 
           <div class="w-full">
-            <div class="scroll-revealed">
-              <h6 class="mb-2 block text-lg font-semibold text-primary">
+            <div>
+              <h6 class="mb-2 block text-lg font-semibold text-sky-400">
                 Sobre nosotros
               </h6>
-              <h2 class="mb-6">
+              <h2 class="mb-6 text-gray-900">
                 Somos IEEE Computational Intelligence Society ESPOL
               </h2>
             </div>
 
-            <div class="tabs scroll-revealed">
-              <nav class="tabs-nav flex flex-wrap gap-4 my-8" role="tablist" aria-label="About us tabs">
+            <div class="tabs">
+              <nav class="flex flex-wrap gap-4 my-8" role="tablist" aria-label="About us tabs">
                 <button type="button"
-                  class="tabs-link inline-block py-2 px-4 rounded-md text-body-light-12 dark:text-body-dark-12 bg-body-light-12/10 dark:bg-body-dark-12/10 text-inherit font-medium hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
+                  class="inline-block py-2 px-4 rounded-md text-gray-900 bg-gray-100 text-inherit font-medium hover:bg-primary hover:text-white focus:bg-primary focus:text-white"
                   data-web-toggle="tabs" data-web-target="tabs-panel-profile" id="tabs-list-profile" role="tab"
                   aria-controls="tabs-panel-profile">
                   ¿Quiénes somos?
                 </button>
 
                 <button type="button"
-                  class="tabs-link inline-block py-2 px-4 rounded-md text-body-light-12 dark:text-body-dark-12 bg-body-light-12/10 dark:bg-body-dark-12/10 text-inherit font-medium hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
+                  class="inline-block py-2 px-4 rounded-md text-gray-900 bg-gray-100 text-inherit font-medium hover:bg-primary hover:text-white focus:bg-primary focus:text-white"
                   data-web-toggle="tabs" data-web-target="tabs-panel-vision" id="tabs-list-vision" role="tab"
                   aria-controls="tabs-panel-vision">
                   Visión
                 </button>
 
                 <button type="button"
-                  class="tabs-link inline-block py-2 px-4 rounded-md text-body-light-12 dark:text-body-dark-12 bg-body-light-12/10 dark:bg-body-dark-12/10 text-inherit font-medium hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
+                  class="inline-block py-2 px-4 rounded-md text-gray-900 bg-gray-100 text-inherit font-medium hover:bg-primary hover:text-white focus:bg-primary focus:text-white"
                   data-web-toggle="tabs" data-web-target="tabs-panel-history" id="tabs-list-history" role="tab"
                   aria-controls="tabs-panel-history">
                   Actividades
                 </button>
               </nav>
 
-              <div class="tabs-content mt-4" id="tabs-panel-profile" tabindex="-1" role="tabpanel"
+              <div class="mt-4" id="tabs-panel-profile" tabindex="-1" role="tabpanel"
                 aria-labelledby="tabs-list-profile">
                 <p>
                   Somos una comunidad estudiantil de la ESPOL afiliada a la IEEE Computational Intelligence Society.
@@ -234,15 +170,14 @@
                 </p>
               </div>
 
-              <div class="tabs-content mt-4" id="tabs-panel-vision" tabindex="-1" role="tabpanel"
-                aria-labelledby="tabs-list-vision">
+              <div class="mt-4" id="tabs-panel-vision" tabindex="-1" role="tabpanel" aria-labelledby="tabs-list-vision">
                 <p>
                   Ser un referente nacional en la formación y difusión de la inteligencia computacional, impulsando la
                   innovación, la investigación y el liderazgo estudiantil en ESPOL y el país.
                 </p>
               </div>
 
-              <div class="tabs-content mt-4" id="tabs-panel-history" tabindex="-1" role="tabpanel"
+              <div class="mt-4" id="tabs-panel-history" tabindex="-1" role="tabpanel"
                 aria-labelledby="tabs-list-history">
                 <p>
                   Organizamos talleres, charlas, hackathons y proyectos colaborativos para acercar a los estudiantes a
@@ -283,10 +218,10 @@
     </section>
 
     <!-- Portfolio section -->
-    <section id="activities" class="section-area">
-      <div class="container">
-        <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
-          <h6 class="mb-2 block text-lg font-semibold text-primary">
+    <section id="activities" class="py-20">
+      <div class="container max-w-[1200px] mx-auto px-4">
+        <div class="mx-auto mb-12 max-w-[550px] text-center">
+          <h6 class="mb-2 block text-lg font-semibold text-sky-400">
             Actividades
           </h6>
           <h2 class="mb-6">Próximamente</h2>
@@ -297,7 +232,7 @@
         </div>
 
         <!-- Filto de actividades (próximamente) -->
-        <!-- <nav class="scroll-revealed portfolio-menu mb-[3.750rem] text-center" aria-label="Portfolio filter">
+        <!-- <nav class="portfolio-menu mb-[3.750rem] text-center" aria-label="Portfolio filter">
           <button type="button"
             class="font-semibold px-5 py-2 rounded-md text-body-light-11 dark:text-body-dark-11 hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color active"
             data-filter="all">
@@ -310,17 +245,17 @@
           </button>
         </nav> -->
 
-        <div class="scroll-revealed portfolio-grid row">
+        <div class="portfolio-grid row">
           <div class="portfolio col-12 sm:col-6 lg:col-4">
             <article class="group" data-filter="branding">
               <div class="relative overflow-hidden w-full aspect-[4/3] rounded-xl">
-                <img src="./assets/img/portfolio/portfolio-1.jpg" alt="Graphics Design"
+                <img src="./img/portfolio/portfolio-1.jpg" alt="Graphics Design"
                   class="w-full h-full object-cover" />
                 <div
                   class="absolute top-0 left-0 w-full aspect-[4/3] flex items-center justify-center bg-body-light-1/75 scale-[0.15] rounded-xl opacity-0 invisible group-hover:scale-95 group-hover:opacity-100 group-hover:visible">
                   <div class="flex flex-wrap gap-2 p-4">
                     <div class="inline-block relative">
-                      <a href="./assets/img/portfolio/portfolio-1.jpg"
+                      <a href="./img/portfolio/portfolio-1.jpg"
                         class="portfolio-box text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color">
                         <i class="lni lni-zoom-in"></i>
                       </a>
@@ -350,20 +285,20 @@
     </section>
 
     <!-- Join section-->
-    <section id="benefits" class="section-area">
-      <div class="container">
+    <section id="benefits" class="py-20">
+      <div class="container max-w-[1200px] mx-auto px-4">
         <div class="grid grid-cols-1 gap-14 lg:grid-cols-2 items-center">
           <!-- Visual complementario -->
           <div class="w-full">
-            <figure class="scroll-revealed max-w-[480px] mx-auto">
-              <img src="./assets/img/rafariva.jpg" alt="Beneficios de unirse a IEEE CIS ESPOL"
+            <figure class="mx-auto max-w-[480px]">
+              <img src="./img/section/rafariva.jpg" alt="Beneficios de unirse a IEEE CIS ESPOL"
                 class="rounded-xl object-cover" />
             </figure>
           </div>
           <!-- Contenido principal -->
           <div class="w-full">
-            <div class="scroll-revealed text-center lg:text-left max-w-[550px] mx-auto mb-12">
-              <h6 class="mb-2 block text-lg font-semibold text-primary">
+            <div class="mx-auto mb-12 max-w-[550px] text-center lg:text-left">
+              <h6 class="mb-2 block text-lg font-semibold text-sky-400">
                 Beneficios de ser parte del capítulo
               </h6>
               <h2 class="mb-4 font-bold text-3xl lg:text-4xl">
@@ -399,7 +334,7 @@
                 </li>
               </ul>
               <a href="#contact"
-                class="inline-block px-6 py-3 rounded-md bg-primary text-primary-color font-semibold shadow-md hover:bg-primary-light-5 focus:bg-primary-light-5 transition">
+                class="inline-block px-6 py-3 rounded-md bg-sky-400 text-white font-semibold shadow-md hover:bg-opacity-90 transition">
                 ¡Quiero unirme!
               </a>
             </div>
@@ -408,15 +343,16 @@
       </div>
     </section>
 
-    <section id="contact" class="section-area">
-      <div class="container">
+    <!-- Contact section -->
+    <section id="contact" class="py-20">
+      <div class="container max-w-[1200px] mx-auto px-4">
         <div class="row">
           <!-- Información de contacto -->
           <div class="col-12 xl:col-4">
             <div class="row">
               <div class="col-12 md:col-6 xl:col-12">
                 <div
-                  class="scroll-revealed py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 flex gap-6 hover:shadow-lg">
+                  class="py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 flex gap-6 hover:shadow-lg">
                   <div>
                     <i
                       class="lni lni-envelope w-[50px] h-[50px] inline-flex items-center justify-center rounded-lg text-[1.25rem] bg-primary text-primary-color"></i>
@@ -430,7 +366,7 @@
 
               <div class="col-12 md:col-6 xl:col-12">
                 <div
-                  class="scroll-revealed py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 flex gap-6 hover:shadow-lg">
+                  class="py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 flex gap-6 hover:shadow-lg">
                   <div>
                     <i
                       class="lni lni-alarm-clock w-[50px] h-[50px] inline-flex items-center justify-center rounded-lg text-[1.25rem] bg-primary text-primary-color"></i>
@@ -445,7 +381,7 @@
 
               <div class="col-12 md:col-6 xl:col-12">
                 <div
-                  class="scroll-revealed py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 flex gap-6 hover:shadow-lg">
+                  class="py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 flex gap-6 hover:shadow-lg">
                   <div>
                     <i
                       class="lni lni-map-marker w-[50px] h-[50px] inline-flex items-center justify-center rounded-lg text-[1.25rem] bg-primary text-primary-color"></i>
@@ -463,9 +399,9 @@
           <!-- Formulario de contacto -->
           <div class="col-12 xl:col-8">
             <div
-              class="scroll-revealed bg-body-light-1 dark:bg-primary-dark-2 rounded-xl py-8 sm:py-12 px-6 sm:px-10 z-10 relative shadow-card-1 hover:shadow-lg">
-              <div class="text-center max-w-[550px] mx-auto mb-12">
-                <h6 class="mb-2 block text-lg font-semibold text-primary">Contáctanos</h6>
+              class="bg-body-light-1 dark:bg-primary-dark-2 rounded-xl py-8 sm:py-12 px-6 sm:px-10 relative z-10 shadow-card-1 hover:shadow-lg">
+              <div class="mx-auto mb-12 max-w-[550px] text-center">
+                <h6 class="mb-2 block text-lg font-semibold text-sky-400">Contáctanos</h6>
                 <h2 class="mb-3">¿Tienes preguntas? ¡Escríbenos!</h2>
                 <p>
                   Estamos aquí para ayudarte. Completa el formulario y te responderemos a la brevedad.
@@ -495,7 +431,7 @@
                   <div class="col-12">
                     <div class="w-full text-center">
                       <button type="submit"
-                        class="inline-block px-5 py-3 rounded-md text-base bg-primary text-primary-color hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10">
+                        class="inline-block px-5 py-3 rounded-md text-base bg-sky-400 text-white hover:bg-opacity-90 focus:bg-opacity-90">
                         Enviar mensaje
                       </button>
                     </div>
@@ -518,104 +454,59 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-primary-dark-2 text-white">
-    <div class="container py-20 lg:py-[80px]">
-      <div class="flex flex-column flex-wrap gap-6 justify-center items-center ">
+  <footer class="bg-sky-400 text-white py-6">
+    <div class="container max-w-[1200px] mx-auto px-4">
+      <div class="flex flex-wrap gap-6 justify-center items-center">
         <!-- Columna 1: IEEE CIS ESPOL -->
         <div class="flex flex-col items-center flex-1">
           <a href="https://cis.ieee.org/" class="inline-block mb-5">
-            <img src="./assets/img/logo_alt.png" alt="IEEE CIS ESPOL logo" class="h-14 w-auto object-contain" />
+            <img src="./img/logo/logo_alt.png" alt="IEEE CIS ESPOL logo" class="h-14 w-auto object-contain" />
           </a>
           <div class="flex items-center justify-center">
             <a href="https://www.facebook.com/IEEECISEcuador" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-facebook-fill text-white hover:text-primary transition-colors"></i>
+              <i class="lni lni-facebook-fill text-white hover:text-blue-500 transition-colors"></i>
             </a>
             <a href="https://www.youtube.com/@ieeecisecuador" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-youtube text-white hover:text-primary transition-colors"></i>
+              <i class="lni lni-youtube text-white hover:text-blue-500 transition-colors"></i>
             </a>
             <a href="https://www.instagram.com/ieeecisecuador/#" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-instagram-original text-white hover:text-primary transition-colors"></i>
+              <i class="lni lni-instagram-original text-white hover:text-blue-500 transition-colors"></i>
             </a>
             <a href="https://www.linkedin.com/company/ieee-cis-ec" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-linkedin-original text-white hover:text-primary transition-colors"></i>
+              <i class="lni lni-linkedin-original text-white hover:text-blue-500 transition-colors"></i>
             </a>
             <a href="https://site.ieee.org/sb-espol/" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-world text-white hover:text-primary transition-colors"></i>
+              <i class="lni lni-world text-white hover:text-blue-500 transition-colors"></i>
             </a>
           </div>
         </div>
         <!-- Columna 2: ESPOL -->
         <div class="flex flex-col items-center flex-1">
           <a href="https://cis.ieee.org/" class="inline-block mb-5">
-            <img src="./assets/img/logoESPOLBlanco.png" alt="ESPOL logo" class="h-14 w-auto object-contain" />
+            <img src="./img/logo/logoESPOLBlanco.png" alt="ESPOL logo" class="h-14 w-auto object-contain" />
           </a>
           <div class="flex items-center justify-center">
             <a href="https://www.facebook.com/IEEECISEcuador" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-facebook-fill text-white hover:text-primary transition-colors"></i>
+              <i class="lni lni-facebook-fill text-white hover:text-blue-500 transition-colors"></i>
             </a>
             <a href="https://www.youtube.com/@ieeecisecuador" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-youtube text-white hover:text-primary transition-colors"></i>
+              <i class="lni lni-youtube text-white hover:text-blue-500 transition-colors"></i>
             </a>
             <a href="https://www.instagram.com/ieeecisecuador/#" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-instagram-original text-white hover:text-primary transition-colors"></i>
+              <i class="lni lni-instagram-original text-white hover:text-blue-500 transition-colors"></i>
             </a>
             <a href="https://www.linkedin.com/company/ieee-cis-ec" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-linkedin-original text-white hover:text-primary transition-colors"></i>
+              <i class="lni lni-linkedin-original text-white hover:text-blue-500 transition-colors"></i>
             </a>
             <a href="https://site.ieee.org/sb-espol/" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-world text-white hover:text-primary transition-colors"></i>
+              <i class="lni lni-world text-white hover:text-blue-500 transition-colors"></i>
             </a>
           </div>
         </div>
-
-        <!--
-        <div class="col-6 lg:col-2">
-          <div class="w-full">
-            <h4 class="mb-9 text-lg font-semibold text-inherit">Solutions</h4>
-            <ul>
-              <li>
-                <a href="javascript:void(0)"
-                  class="mb-3 inline-block text-body-dark-11 hover:text-primary">Marketing</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)"
-                  class="mb-3 inline-block text-body-dark-11 hover:text-primary">Analytics</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" class="mb-3 inline-block text-body-dark-11 hover:text-primary">Commerce</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" class="mb-3 inline-block text-body-dark-11 hover:text-primary">Insights</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-6 lg:col-2">
-          <div class="w-full">
-            <h4 class="mb-9 text-lg font-semibold text-inherit">Support</h4>
-            <ul>
-              <li>
-                <a href="javascript:void(0)" class="mb-3 inline-block text-body-dark-11 hover:text-primary">Pricing</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)"
-                  class="mb-3 inline-block text-body-dark-11 hover:text-primary">Documentation</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" class="mb-3 inline-block text-body-dark-11 hover:text-primary">Guides</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" class="mb-3 inline-block text-body-dark-11 hover:text-primary">API
-                  Status</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        -->
       </div>
     </div>
-    <div class="w-full border-t border-solid border-alpha-dark"></div>
-    <div class="container py-8">
+    <div class="w-full border-t border-gray-700"></div>
+    <div class="container max-w-[1200px] mx-auto px-4 py-6">
       <div class="flex flex-wrap justify-center">
         <p class="text-white text-center w-full mt-4 text-sm leading-relaxed">
           © 2025 IEEE CIS ESPOL. Todos los derechos reservados.
@@ -624,18 +515,9 @@
     </div>
   </footer>
 
-  <button type="button"
-    class="inline-flex w-12 h-12 rounded-md items-center justify-center text-lg/none bg-primary text-primary-color hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10 fixed bottom-[117px] right-[20px] hover:-translate-y-1 opacity-100 visible z-50 is-hided"
-    data-web-trigger="scroll-top" aria-label="Scroll to top">
-    <i class="lni lni-chevron-up"></i>
-  </button>
-
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
   <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-
-  <script src="./assets/js/main.js"></script>
-  <script src="./assets/js/file01.js" type="module"></script>
 
   <script>
     // Scroll Reveal
@@ -653,7 +535,7 @@
     // GLightBox
     GLightbox({
       selector: ".video-popup",
-      href: "https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM",
+      href: "https://www.youtube.com/watch?v=r44RKWyfcFw",
       type: "video",
       source: "youtube",
       width: 900,
@@ -692,6 +574,7 @@
       },
     });
   </script>
+  <script src="assets/js/file01.js" type="module"></script>
 </body>
 
 </html>

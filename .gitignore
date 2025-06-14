@@ -23,5 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-# Firebase environment variables
+# env
 .env
