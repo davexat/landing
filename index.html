@@ -45,27 +45,27 @@
             <ul class="block lg:flex" role="menu" aria-label="Navigation menu">
               <li class="group relative">
                 <a href="#home"
-                  class="flex py-2 px-6 text-base font-medium text-white hover:text-sky-100 lg:inline-flex lg:px-6 lg:py-6"
+                  class="flex py-2 px-6 text-base font-medium text-white hover:text-sky-100 lg:inline-flex lg:px-6 lg:py-6 transition-color duration-200"
                   role="menuitem">Inicio</a>
               </li>
               <li class="group relative">
                 <a href="#about"
-                  class="flex py-2 px-6 text-base font-medium text-white hover:text-sky-100 lg:inline-flex lg:px-6 lg:py-6"
+                  class="flex py-2 px-6 text-base font-medium text-white hover:text-sky-100 lg:inline-flex lg:px-6 lg:py-6 transition-color duration-200"
                   role="menuitem">Sobre nosotros</a>
               </li>
               <li class="group relative">
                 <a href="#activities"
-                  class="flex py-2 px-6 text-base font-medium text-white hover:text-sky-100 lg:inline-flex lg:px-6 lg:py-6"
+                  class="flex py-2 px-6 text-base font-medium text-white hover:text-sky-100 lg:inline-flex lg:px-6 lg:py-6 transition-color duration-200"
                   role="menuitem">Actividades</a>
               </li>
               <li class="group relative">
                 <a href="#benefits"
-                  class="flex py-2 px-6 text-base font-medium text-white hover:text-sky-100 lg:inline-flex lg:px-6 lg:py-6"
+                  class="flex py-2 px-6 text-base font-medium text-white hover:text-sky-100 lg:inline-flex lg:px-6 lg:py-6 transition-color duration-200"
                   role="menuitem">Beneficios</a>
               </li>
               <li class="group relative">
                 <a href="#contact"
-                  class="flex py-2 px-6 text-base font-medium text-white hover:text-sky-100 lg:inline-flex lg:px-6 lg:py-6"
+                  class="flex py-2 px-6 text-base font-medium text-white hover:text-sky-100 lg:inline-flex lg:px-6 lg:py-6 transition-color duration-200"
                   role="menuitem">Contacto</a>
               </li>
             </ul>
@@ -218,13 +218,13 @@
     </section>
 
     <!-- Portfolio section -->
-    <section id="activities" class="py-20">
-      <div class="container max-w-[1200px] mx-auto px-4">
+    <section id="activities" class="py-24 relative bg-white">
+      <div class="container max-w-[1200px] mx-auto px-5 w-full">
         <div class="mx-auto mb-12 max-w-[550px] text-center">
           <h6 class="mb-2 block text-lg font-semibold text-sky-400">
             Actividades
           </h6>
-          <h2 class="mb-6">Próximamente</h2>
+          <h2 class="mb-6 font-bold text-4xl">Próximamente</h2>
           <p>
             El capítulo IEEE CIS ESPOL es nuevo y aún no hemos realizado actividades. ¡Muy pronto compartiremos
             talleres, charlas y proyectos para toda la comunidad!
@@ -245,10 +245,10 @@
           </button>
         </nav> -->
 
-        <div class="portfolio-grid row">
-          <div class="portfolio col-12 sm:col-6 lg:col-4">
+        <div class="portfolio-grid flex flex-wrap justify-center">
+          <div class="portfolio w-full sm:w-1/2 lg:w-1/3">
             <article class="group" data-filter="branding">
-              <div class="relative mx-auto w-fit overflow-hidden aspect-[4/3] rounded-xl">
+              <div class="relative w-full overflow-hidden aspect-[4/3] rounded-xl">
                 <img src="./img/portfolio/portfolio-1.jpg" alt="Graphics Design" class="w-full h-full object-cover" />
                 <div
                   class="absolute top-0 left-0 w-full aspect-[4/3] flex items-center justify-center bg-body-light-1/75 scale-[0.15] rounded-xl opacity-0 invisible group-hover:scale-95 group-hover:opacity-100 group-hover:visible">
@@ -270,7 +270,8 @@
               </div>
               <div class="pt-4">
                 <h4 class="mb-2">
-                  <a href="javascript:void(0)" class="text-[1.5rem] leading-tight text-inherit">¡Muy pronto!</a>
+                  <a href="javascript:void(0)" class="text-[1.5rem] leading-tight text-inherit text-2xl font-bold">¡Muy
+                    pronto!</a>
                 </h4>
                 <p>
                   El capítulo IEEE CIS ESPOL acaba de iniciar. Muy pronto compartiremos aquí nuestras primeras
@@ -307,9 +308,9 @@
                 Al unirte a nuestra comunidad, obtendrás acceso a valiosas oportunidades y recursos.
               </p>
               <ul class="mb-8 space-y-4 text-left">
-                <li class="flex items-start gap-3">
+                <li class="flex items-start gap-3 group">
                   <span>
-                    <svg class="w-5 h-5 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                    <svg class="w-5 h-5 group-hover:text-sky-500 transition-color duration-200 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
                       stroke-width="2" viewBox="0 0 24 24">
                       <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2" fill="none" />
                       <path d="M7 13l3 3 7-7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
@@ -318,9 +319,9 @@
                   </span>
                   <span>Participa en talleres y seminarios exclusivos sobre IA y temas relacionados.</span>
                 </li>
-                <li class="flex items-start gap-3">
+                <li class="flex items-start gap-3 group">
                   <span>
-                    <svg class="w-5 h-5 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                    <svg class="w-5 h-5 group-hover:text-sky-500 transition-color duration-200 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
                       stroke-width="2" viewBox="0 0 24 24">
                       <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2" fill="none" />
                       <path d="M7 13l3 3 7-7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
@@ -329,9 +330,9 @@
                   </span>
                   <span>Conecta con profesionales y expertos en el campo de la Inteligencia Computacional.</span>
                 </li>
-                <li class="flex items-start gap-3">
+                <li class="flex items-start gap-3 group">
                   <span>
-                    <svg class="w-5 h-5 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                    <svg class="w-5 h-5 group-hover:text-sky-500 transition-color duration-200 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
                       stroke-width="2" viewBox="0 0 24 24">
                       <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2" fill="none" />
                       <path d="M7 13l3 3 7-7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
@@ -340,9 +341,9 @@
                   </span>
                   <span>Colabora en proyectos innovadores y desafiantes.</span>
                 </li>
-                <li class="flex items-start gap-3">
+                <li class="flex items-start gap-3 group">
                   <span>
-                    <svg class="w-5 h-5 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                    <svg class="w-5 h-5 group-hover:text-sky-500 transition-color duration-200 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
                       stroke-width="2" viewBox="0 0 24 24">
                       <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2" fill="none" />
                       <path d="M7 13l3 3 7-7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
@@ -351,9 +352,9 @@
                   </span>
                   <span>Desarrolla habilidades blandas como liderazgo y trabajo en equipo.</span>
                 </li>
-                <li class="flex items-start gap-3">
+                <li class="flex items-start gap-3 group">
                   <span>
-                    <svg class="w-5 h-5 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                    <svg class="w-5 h-5 group-hover:text-sky-500 transition-color duration-200 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
                       stroke-width="2" viewBox="0 0 24 24">
                       <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2" fill="none" />
                       <path d="M7 13l3 3 7-7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
@@ -362,9 +363,9 @@
                   </span>
                   <span>Obtén certificados y reconocimiento por tu participación en eventos.</span>
                 </li>
-                <li class="flex items-start gap-3">
+                <li class="flex items-start gap-3 group">
                   <span>
-                    <svg class="w-5 h-5 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                    <svg class="w-5 h-5 group-hover:text-sky-500 transition-color duration-200 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
                       stroke-width="2" viewBox="0 0 24 24">
                       <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2" fill="none" />
                       <path d="M7 13l3 3 7-7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
@@ -411,50 +412,49 @@
     </section>
 
     <!-- Contact section -->
-    <section id="contact" class="py-20">
-      <div class="container max-w-[1200px] mx-auto px-4">
-        <div class="row">
+    <section id="contact" class="py-20 relative bg-gray-100">
+      <div class="container max-w-[1200px] mx-auto px-5">
+        <div class="flex flex-wrap lg:flex-nowrap justify-center gap-8">
           <!-- Información de contacto -->
-          <div class="col-12 xl:col-4">
-            <div class="row">
-              <div class="col-12 md:col-6 xl:col-12">
+          <div class="w-full md:w-1/2">
+            <div class="flex flex-wrap justify-center gap-8">
+              <div class="w-full">
                 <div
-                  class="py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 flex gap-6 hover:shadow-lg transition duration-300">
+                  class="py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 flex gap-6 shadow-lg hover:bg-white transition-color duration-300">
                   <div>
                     <i
                       class="lni lni-envelope w-[50px] h-[50px] inline-flex items-center justify-center rounded-lg text-[1.25rem] bg-primary text-primary-color"></i>
                   </div>
                   <div>
-                    <h4 class="text-[1.25rem] text-primary mb-3">Correo Electrónico</h4>
+                    <h4 class="text-sky-400 font-semibold text-xl text-primary mb-3">Correo Electrónico</h4>
                     <p class="m-0">ieee@espol.edu.ec</p>
                   </div>
                 </div>
               </div>
 
-              <div class="col-12 md:col-6 xl:col-12">
+              <div class="w-full">
                 <div
-                  class="py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 flex gap-6 hover:shadow-lg transition duration-300">
+                  class="py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 flex gap-6 shadow-lg hover:bg-white transition-color duration-300">
                   <div>
                     <i
                       class="lni lni-alarm-clock w-[50px] h-[50px] inline-flex items-center justify-center rounded-lg text-[1.25rem] bg-primary text-primary-color"></i>
                   </div>
                   <div>
-                    <h4 class="text-[1.25rem] text-primary mb-3">Horario</h4>
+                    <h4 class="text-sky-400 font-semibold text-xl text-primary mb-3">Horario</h4>
                     <p class="m-0">Lunes a Viernes</p>
                     <p class="m-0">10:00 AM - 5:00 PM</p>
                   </div>
                 </div>
               </div>
 
-              <div class="col-12 md:col-6 xl:col-12">
+              <div class="w-full">
                 <div
-                  class="py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 flex gap-6 hover:shadow-lg transition duration-300">
-                  <div>
-                    <i
-                      class="lni lni-map-marker w-[50px] h-[50px] inline-flex items-center justify-center rounded-lg text-[1.25rem] bg-primary text-primary-color"></i>
+                  class="py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 flex gap-6 shadow-lg hover:bg-white transition-color duration-300">
+                  <div class="text-white text-xl">
+                    <i class="lni lni-map-marker mt-2 w-13 h-13 inline-flex rounded-lg bg-sky-400"></i>
                   </div>
                   <div>
-                    <h4 class="text-[1.25rem] text-primary mb-3">Ubicación</h4>
+                    <h4 class="text-sky-400 font-semibold text-xl text-primary mb-3">Ubicación</h4>
                     <p class="m-0">Campus Gustavo Galindo, ESPOL</p>
                     <p class="m-0">Guayaquil, Ecuador</p>
                   </div>
@@ -464,12 +464,12 @@
           </div>
 
           <!-- Formulario de contacto -->
-          <div class="col-12 xl:col-8">
+          <div class="w-full xl:w-2/3">
             <div
-              class="bg-body-light-1 dark:bg-primary-dark-2 rounded-xl py-8 sm:py-12 px-6 sm:px-10 relative z-10 shadow-card-1 hover:shadow-lg transition duration-300">
+              class="bg-body-light-1 dark:bg-primary-dark-2 rounded-xl py-8 sm:py-12 px-6 sm:px-10 relative z-10 shadow-card-1 shadow-lg hover:bg-white transition-color duration-300">
               <div class="mx-auto mb-12 max-w-[550px] text-center">
                 <h6 class="mb-2 block text-lg font-semibold text-sky-400">Contáctanos</h6>
-                <h2 class="mb-3">¿Tienes preguntas? ¡Escríbenos!</h2>
+                <h2 class="mb-3 font-bold text-4xl">¿Tienes preguntas? ¡Escríbenos!</h2>
                 <p>
                   Estamos aquí para ayudarte. Completa el formulario y te responderemos en breve.
                 </p>
