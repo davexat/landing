@@ -34,14 +34,14 @@
         </div>
         <div class="flex items-center space-x-4">
           <button type="button"
-            class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-md px-3 py-[6px] text-[22px]/none text-gray-900 ring-gray-500 focus:ring-2 lg:hidden"
+            class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-md px-3 py-[6px] text-[22px]/none text-white hover:text-gray-900 ring-gray-500 transition-color duration-200 lg:hidden cursor-pointer"
             data-web-toggle="navbar-collapse" data-web-target="navbarMenu" aria-expanded="false"
             aria-label="Toggle navigation menu">
             <i class="lni lni-menu"></i>
           </button>
 
           <nav id="navbarMenu"
-            class="absolute right-4 top-[80px] w-full max-w-[250px] rounded-lg hidden bg-gray-100 py-5 shadow-lg dark:bg-gray-800 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
+            class="absolute right-4 top-[80px] w-full max-w-[250px] rounded-lg hidden bg-sky-800 py-5 shadow-lg dark:bg-gray-800 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
             <ul class="block lg:flex" role="menu" aria-label="Navigation menu">
               <li class="group relative">
                 <a href="#home"
@@ -584,6 +584,47 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
   <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+  
+  <script>
+  // Script para el menú de navegación móvil
+  // Selecciona el botón y el menú
+  const menuBtn = document.querySelector('[aria-label="Toggle navigation menu"]');
+  const navMenu = document.getElementById('navbarMenu');
+
+  // Mostrar/ocultar menú al hacer clic en el botón
+  menuBtn.addEventListener('click', (e) => {
+    navMenu.classList.toggle('hidden');
+    const expanded = navMenu.classList.contains('hidden') ? 'false' : 'true';
+    menuBtn.setAttribute('aria-expanded', expanded);
+    e.stopPropagation();
+  });
+
+  // Cerrar menú al hacer clic fuera de él (solo en móvil)
+  document.addEventListener('click', (e) => {
+    const isMenuOpen = !navMenu.classList.contains('hidden');
+    const isMobile = window.innerWidth < 1024;
+    if (
+      isMenuOpen &&
+      isMobile &&
+      !navMenu.contains(e.target) &&
+      !menuBtn.contains(e.target)
+    ) {
+      navMenu.classList.add('hidden');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Cerrar menú al hacer clic en cualquier enlace del menú (solo en móvil)
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 1024) {
+        navMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+</script>
 
   <script>
     // Scroll Reveal
