@@ -93,3 +93,24 @@ const observer = new IntersectionObserver((entries, obs) => {
 sections.forEach(section => {
     observer.observe(section);
 });
+
+// Ajustar el scroll al hacer clic en los enlaces del menú
+const navLinks = document.querySelectorAll('a[href^="#"]');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault(); // Evita el comportamiento predeterminado del enlace
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            const offset = 170; // Ajusta este valor según el tamaño del navbar o el espacio deseado
+            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                top: offsetPosition
+            });
+        }
+    });
+});
