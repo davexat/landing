@@ -20,18 +20,19 @@
   <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css">
 
   <!-- Custom styles -->
-  <link rel="stylesheet" href="./assets/css/style.css"/>
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body class="bg-gray-50 text-gray-900">
   <!-- Navbar -->
-  <header class="fixed left-0 top-0 z-40 flex w-full items-center bg-sky-400/90 backdrop-blur transition-all duration-300" role="banner"
-    aria-label="Navigation bar">
+  <header
+    class="fixed left-0 top-0 z-40 flex w-full items-center bg-sky-400/90 backdrop-blur transition-all duration-300"
+    role="banner" aria-label="Navigation bar">
     <div class="container mx-auto px-4">
       <div class="flex items-center justify-between">
         <div class="w-60 lg:w-56">
           <a href="." class="block w-full">
-            <img src="./img/logo/logo.png" alt="Computacional Intelligence Society logo"
+            <img src="./img/logo/logo_alt.png" alt="Computacional Intelligence Society logo"
               class="h-10 w-auto object-contain" />
           </a>
         </div>
@@ -44,7 +45,7 @@
           </button>
 
           <nav id="navbarMenu"
-            class="absolute right-4 top-[80px] w-full max-w-[250px] rounded-lg hidden bg-sky-800 py-5 shadow-lg dark:bg-gray-800 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
+            class="absolute right-2 top-[60px] w-full max-w-[250px] rounded-lg hidden bg-sky-800 py-5 shadow-lg dark:bg-gray-800 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
             <ul class="block lg:flex" role="menu" aria-label="Navigation menu">
               <li class="group relative">
                 <a href="#home"
@@ -120,7 +121,7 @@
     </section>
 
     <!-- About section -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-20 bg-white opacity-0 translate-y-8 transition-all duration-700">
       <div class="container max-w-[1200px] mx-auto px-4">
         <div class="grid grid-cols-1 gap-14 lg:grid-cols-2">
           <div class="w-full">
@@ -173,7 +174,8 @@
                 </p>
               </div>
 
-              <div class="mt-4  tab-panel" id="tabs-panel-vision" tabindex="-1" role="tabpanel" aria-labelledby="tabs-list-vision">
+              <div class="mt-4  tab-panel" id="tabs-panel-vision" tabindex="-1" role="tabpanel"
+                aria-labelledby="tabs-list-vision">
                 <p>
                   Ser un referente nacional en la formación y difusión de la inteligencia computacional, impulsando la
                   innovación, la investigación y el liderazgo estudiantil en ESPOL y el país.
@@ -223,7 +225,7 @@
     -->
 
     <!-- Portfolio section -->
-    <section id="activities" class="py-24 relative">
+    <section id="activities" class="py-24 relative opacity-0 translate-y-8 transition-all duration-700">
       <div class="container max-w-[1200px] mx-auto px-5 w-full">
         <div class="mx-auto mb-12 max-w-[550px] text-center">
           <h6 class="mb-2 block text-lg font-semibold text-sky-400">
@@ -290,7 +292,7 @@
     </section>
 
     <!-- Join section-->
-    <section id="benefits" class="py-20 bg-white">
+    <section id="benefits" class="py-20 bg-white opacity-0 translate-y-8 transition-all duration-700">
       <div class="container max-w-[1200px] mx-auto px-4">
         <div class="grid grid-cols-1 gap-14 lg:grid-cols-2 items-center">
           <!-- Visual complementario -->
@@ -417,7 +419,7 @@
     </section>
 
     <!-- Contact section -->
-    <section id="contact" class="py-20 relative">
+    <section id="contact" class="py-20 relative opacity-0 translate-y-8 transition-all duration-700">
       <div class="container max-w-[1200px] mx-auto px-5">
         <div class="flex flex-wrap lg:flex-nowrap justify-center gap-8">
           <!-- Información de contacto -->
@@ -501,7 +503,7 @@
                   <div class="col-12">
                     <div class="w-full text-center">
                       <button type="submit"
-                        class="inline-block cursor-pointer px-5 py-3 rounded-md text-base bg-sky-400 text-white hover:bg-sky-500 transition-colors duration-300 shadow-lg focus:bg-opacity-90">
+                        class="inline-block cursor-pointer px-5 py-3 rounded-md text-base bg-sky-400 text-white hover:bg-sky-500 transition-colors duration-300 font-semibold shadow-lg focus:bg-opacity-90">
                         Enviar mensaje
                       </button>
                     </div>
@@ -515,7 +517,7 @@
     </section>
 
     <!-- Mapa - Actualizado para usar ubicación real de ESPOL -->
-    <section id="map" class="w-full h-[500px] overflow-hidden">
+    <section id="map" class="w-full h-[500px] overflow-hidden opacity-0 translate-y-8 transition-all duration-700">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0162001338925!2d-79.96698039999999!3d-2.1478962999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d72f925e5bfdb%3A0x327f1652092bb86d!2sEscuela%20Superior%20Polit%C3%A9cnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses-419!2sec!4v1717894793962!5m2!1ses-419!2sec"
         class="border-0 w-full h-full" allowfullscreen="" loading="lazy"
@@ -530,46 +532,46 @@
         <!-- Columna 1: IEEE CIS ESPOL -->
         <div class="flex flex-col items-center">
           <a href="https://cis.ieee.org/" class="inline-block mb-5">
-            <img src="./img/logo/logo_alt.png" alt="IEEE CIS ESPOL logo" class="h-14 w-auto object-contain" />
+            <img src="./img/logo/logo_alt.png" alt="IEEE CIS ESPOL logo" class="h-14 w-auto object-contain transition-transform duration-300 hover:scale-110  hover:brightness-125" />
           </a>
           <div class="flex items-center justify-center">
-            <a href="https://www.facebook.com/IEEECISEcuador" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-facebook-fill text-white hover:text-blue-500 transition-colors"></i>
+            <a href="https://www.facebook.com/IEEECISEcuador" class="transition-transform duration-300 hover:scale-130 px-3 text-[22px] leading-none">
+              <i class="lni lni-facebook-fill text-white transition"></i>
             </a>
-            <a href="https://www.youtube.com/@ieeecisecuador" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-youtube text-white hover:text-blue-500 transition-colors"></i>
+            <a href="https://www.youtube.com/@ieeecisecuador" class="transition-transform duration-300 hover:scale-130 px-3 text-[22px] leading-none">
+              <i class="lni lni-youtube text-white transition"></i>
             </a>
-            <a href="https://www.instagram.com/ieeecisecuador/#" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-instagram-original text-white hover:text-blue-500 transition-colors"></i>
+            <a href="https://www.instagram.com/ieeecisecuador/#" class="transition-transform duration-300 hover:scale-130 px-3 text-[22px] leading-none">
+              <i class="lni lni-instagram-original text-white transition"></i>
             </a>
-            <a href="https://www.linkedin.com/company/ieee-cis-ec" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-linkedin-original text-white hover:text-blue-500 transition-colors"></i>
+            <a href="https://www.linkedin.com/company/ieee-cis-ec" class="transition-transform duration-300 hover:scale-130 px-3 text-[22px] leading-none">
+              <i class="lni lni-linkedin-original text-white transition"></i>
             </a>
-            <a href="https://site.ieee.org/sb-espol/" class="hover:text-gray-300 px-3 text-[22px] leading-none">
-              <i class="lni lni-world text-white hover:text-blue-500 transition-colors"></i>
+            <a href="https://site.ieee.org/sb-espol/" class="transition-transform duration-300 hover:scale-130 px-3 text-[22px] leading-none">
+              <i class="lni lni-world text-white transition-colors"></i>
             </a>
           </div>
         </div>
         <!-- Columna 2: ESPOL -->
         <div class="flex flex-col items-center">
           <a href="https://www.espol.edu.ec/es" class="inline-block mb-5">
-            <img src="./img/logo/logoESPOLBlanco.png" alt="ESPOL logo" class="h-14 w-auto object-contain" />
+            <img src="./img/logo/logoESPOLBlanco.png" alt="ESPOL logo" class="h-14 w-auto object-contain transition-transform duration-300 hover:scale-110  hover:brightness-125" />
           </a>
           <div class="flex items-center justify-center">
-            <a href="https://www.facebook.com/IEEECISEcuador" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-facebook-fill text-white hover:text-blue-500 transition-colors"></i>
+            <a href="https://www.facebook.com/IEEECISEcuador" class=" transition-transform duration-300 hover:scale-130 px-3 text-[22px] leading-none">
+              <i class="lni lni-facebook-fill text-white transition"></i>
             </a>
-            <a href="https://www.youtube.com/espol50?themeRefresh=1" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-youtube text-white hover:text-blue-500 transition-colors"></i>
+            <a href="https://www.youtube.com/espol50?themeRefresh=1" class="transition-transform duration-300 hover:scale-130 px-3 text-[22px] leading-none">
+              <i class="lni lni-youtube text-white transition"></i>
             </a>
-            <a href="https://www.instagram.com/ieeecisecuador/#" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-instagram-original text-white hover:text-blue-500 transition-colors"></i>
+            <a href="https://www.instagram.com/ieeecisecuador/#" class="transition-transform duration-300 hover:scale-130 px-3 text-[22px] leading-none">
+              <i class="lni lni-instagram-original text-white transition"></i>
             </a>
-            <a href="https://www.linkedin.com/company/ieee-cis-ec" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-linkedin-original text-white hover:text-blue-500 transition-colors"></i>
+            <a href="https://www.linkedin.com/company/ieee-cis-ec" class="transition-transform duration-300 hover:scale-130 px-3 text-[22px] leading-none">
+              <i class="lni lni-linkedin-original text-white transition"></i>
             </a>
-            <a href="https://site.ieee.org/sb-espol/" class="px-3 text-[22px] leading-none">
-              <i class="lni lni-world text-white hover:text-blue-500 transition-colors"></i>
+            <a href="https://site.ieee.org/sb-espol/" class="transition-transform duration-300 hover:scale-130 px-3 text-[22px] leading-none">
+              <i class="lni lni-world text-white transition"></i>
             </a>
           </div>
         </div>
@@ -578,7 +580,7 @@
     <div class="w-full border-t border-white"></div>
     <div class="container max-w-[1200px] mx-auto px-4 py-6">
       <div class="flex flex-wrap justify-center">
-        <p class="text-white text-center w-full text-sm leading-relaxed">
+        <p class="text-white font-semibold text-center w-full text-sm leading-relaxed">
           © 2025 IEEE CIS ESPOL. Todos los derechos reservados.
         </p>
       </div>
@@ -589,143 +591,7 @@
   <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
   <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
-  <script>
-    // filepath: (coloca esto al final de tu archivo HTML o en tu archivo JS principal)
-    // Selecciona todos los botones de las pestañas y los paneles
-    const tabButtons = document.querySelectorAll('[data-web-toggle="tabs"]');
-const tabPanels = [
-  document.getElementById('tabs-panel-profile'),
-  document.getElementById('tabs-panel-vision'),
-  document.getElementById('tabs-panel-history')
-];
-
-tabButtons.forEach((btn, idx) => {
-  btn.addEventListener('click', () => {
-    // Oculta todos los paneles
-    tabPanels.forEach(panel => {
-      panel.classList.remove('active');
-      panel.setAttribute('aria-hidden', 'true');
-    });
-
-    // Remueve el estado activo de todos los botones
-    tabButtons.forEach(b => b.classList.remove('bg-sky-400', 'text-white'));
-
-    // Muestra el panel correspondiente con animación
-    tabPanels[idx].classList.add('active');
-    tabPanels[idx].setAttribute('aria-hidden', 'false');
-
-    // Marca el botón como activo
-    btn.classList.add('bg-sky-400', 'text-white');
-  });
-});
-
-// Inicializa mostrando solo el primer panel
-tabPanels.forEach((panel, idx) => {
-  if (idx === 0) {
-    panel.classList.add('active');
-    panel.setAttribute('aria-hidden', 'false');
-  } else {
-    panel.classList.remove('active');
-    panel.setAttribute('aria-hidden', 'true');
-  }
-});
-  </script>
-
-  <script>
-    // Script para el menú de navegación móvil
-    // Selecciona el botón y el menú
-    const menuBtn = document.querySelector('[aria-label="Toggle navigation menu"]');
-    const navMenu = document.getElementById('navbarMenu');
-
-    // Mostrar/ocultar menú al hacer clic en el botón
-    menuBtn.addEventListener('click', (e) => {
-      navMenu.classList.toggle('hidden');
-      const expanded = navMenu.classList.contains('hidden') ? 'false' : 'true';
-      menuBtn.setAttribute('aria-expanded', expanded);
-      e.stopPropagation();
-    });
-
-    // Cerrar menú al hacer clic fuera de él (solo en móvil)
-    document.addEventListener('click', (e) => {
-      const isMenuOpen = !navMenu.classList.contains('hidden');
-      const isMobile = window.innerWidth < 1024;
-      if (
-        isMenuOpen &&
-        isMobile &&
-        !navMenu.contains(e.target) &&
-        !menuBtn.contains(e.target)
-      ) {
-        navMenu.classList.add('hidden');
-        menuBtn.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    // Cerrar menú al hacer clic en cualquier enlace del menú (solo en móvil)
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth < 1024) {
-          navMenu.classList.add('hidden');
-          menuBtn.setAttribute('aria-expanded', 'false');
-        }
-      });
-    });
-  </script>
-
-  <script>
-    // Scroll Reveal
-    const sr = ScrollReveal({
-      origin: "bottom",
-      distance: "16px",
-      duration: 1000,
-      reset: false,
-    });
-
-    sr.reveal(`.scroll-revealed`, {
-      cleanup: true,
-    });
-
-    // GLightBox
-    GLightbox({
-      selector: ".video-popup",
-      href: "https://www.youtube.com/watch?v=r44RKWyfcFw",
-      type: "video",
-      source: "youtube",
-      width: 900,
-      autoplayVideos: true,
-    });
-
-    const myGallery3 = GLightbox({
-      selector: ".portfolio-box",
-      type: "image",
-      width: 900,
-    });
-
-    // Testimonial
-    const testimonialSwiper = new Swiper(".testimonial-carousel", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 30,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-        1280: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-      },
-    });
-  </script>
+  <script src ="./assets/js/front.js" type="module"></script>
   <script src="assets/js/file01.js" type="module"></script>
 </body>
 
