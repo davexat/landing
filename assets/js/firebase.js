@@ -51,7 +51,7 @@ function renderCommentsPage() {
 
   pageComments.forEach(comment => {
     const div = document.createElement('div');
-    div.className = "bg-white overflow-hidden border border-gray-300 rounded-lg p-4 shadow flex flex-col";
+    div.className = "overflow-hidden rounded-lg p-4 shadow-xl flex flex-col hover:bg-white transition-colors duration-300";
     div.innerHTML = `
       <p class="font-semibold text-sky-500 mb-1">${comment.name}</p>
       <p class="text-gray-700 mb-2">${comment.message}</p>
