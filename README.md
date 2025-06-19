@@ -33,7 +33,7 @@ La landing page presenta información relevante sobre el capítulo IEEE CIS ESPO
 ## Créditos
 
 - Plantilla base creada por Ranyeh, adaptada y modificada para IEEE CIS ESPOL.
-- Desarrollado y mantenido por David Elias Sandoval Bernitta y colaboradores.
+- Desarrollado y mantenido por David Elias Sandoval Bernitta y Bruno Rafael Romero Yagual
 
 ---
 
