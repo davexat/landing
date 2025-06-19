@@ -5,12 +5,12 @@ import { getDatabase, ref, set, push, get, onValue } from "https://www.gstatic.c
 
 // Configuración de Firebase usando variables de entorno de Vite
 const firebaseConfig = {
-    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-    appId: import.meta.env.VITE_FIREBASE_APP_ID
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
@@ -83,7 +83,7 @@ function listenForComments() {
   });
 }
 
-document.getElementById('form_comments').addEventListener('submit', async function(e) {
+document.getElementById('form_comments').addEventListener('submit', async function (e) {
   e.preventDefault();
   const name = document.getElementById('input_name').value.trim();
   const message = document.getElementById('input_message').value.trim();
@@ -93,18 +93,68 @@ document.getElementById('form_comments').addEventListener('submit', async functi
   }
 });
 
-document.getElementById('prev_comments').addEventListener('click', function() {
+document.getElementById('prev_comments').addEventListener('click', function () {
   if (currentPage > 0) {
     currentPage--;
     renderCommentsPage();
   }
 });
 
-document.getElementById('next_comments').addEventListener('click', function() {
+document.getElementById('next_comments').addEventListener('click', function () {
   if ((currentPage + 1) * COMMENTS_PER_PAGE < allComments.length) {
     currentPage++;
     renderCommentsPage();
   }
 });
+
+// ----------- CONTACTO -----------
+
+// Mostrar toast de éxito
+function showToast(message = "¡Mensaje enviado correctamente!") {
+  const toast = document.getElementById('toast-success');
+  if (!toast) return;
+  toast.textContent = message;
+  toast.classList.remove('hidden');
+  // Forzar reflujo para que la transición funcione
+  void toast.offsetWidth;
+  toast.classList.add('opacity-100');
+  toast.classList.remove('opacity-0');
+  setTimeout(() => {
+    toast.classList.remove('opacity-100');
+    toast.classList.add('opacity-0');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 300); // Debe coincidir con duration-300
+  }, 2000);
+}
+
+// Guardar mensaje de contacto en Firebase
+async function saveContactMessage(name, email, message) {
+  const contactRef = ref(database, 'contact_messages');
+  const newContactRef = push(contactRef);
+  const contactData = {
+    name,
+    email,
+    message,
+    date: new Date().toISOString()
+  };
+  await set(newContactRef, contactData);
+}
+
+// Manejar el envío del formulario de contacto
+const contactForm = document.getElementById('form_contact');
+if (contactForm) {
+  contactForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const name = document.getElementById('input_contact_name').value.trim();
+    const email = document.getElementById('input_contact_email').value.trim();
+    const message = document.getElementById('input_contact_message').value.trim();
+    if (name && email && message) {
+      await saveContactMessage(name, email, message);
+      contactForm.reset();
+      showToast();
+    }
+  });
+}
 
 listenForComments();
